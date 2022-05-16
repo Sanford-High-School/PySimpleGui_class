@@ -12,15 +12,13 @@ def create_cow():
 
     # Create the Window
     window = sg.Window('Cattle Herd', layout)
-    # Event Loop to process "events" and get the "values" of the inputs
+    # Event get the "values" of the inputs
     event, values = window.read()
-
-    print('You entered ', values[0],values[1])
-
     window.close()
-
+    print('You entered ', values[0],values[1])
+    
 def read_cow():
-    pass
+    print("You are in read_cow")
 
 def update_cow():
     pass
@@ -38,18 +36,12 @@ def show_crud():
 
     # Create the Window
     window = sg.Window('Cattle Herd', layout)
-    # Event Loop to process "events" and get the "values" of the inputs
-    #while True:
+    # get the "values" of the inputs
     event, values = window.read()
-    #    if event == sg.WIN_CLOSED or event == 'Quit': # if user closes window or clicks cancel
-        #break
-        #print('You entered ', event)
-
     window.close()
     return event
 
 # main program
-
 # show form to get CRUD
 menu_event = show_crud()
 while menu_event != 'Quit':
@@ -64,3 +56,4 @@ while menu_event != 'Quit':
         
     menu_event = show_crud()
     
+
